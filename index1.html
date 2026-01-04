@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>我的模版.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+我的模版.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;h3&gt;</span><span class="s1">阅读理解题</span><span class="s0">&lt;/h3&gt;</span>
+<span class="s0">&lt;p&gt;</span><span class="s1">Passage: There are many types of renewable energy...</span><span class="s0">&lt;/p &gt;</span>
+<span class="s0">&lt;p&gt;</span><span class="s1">Question: Which of the following is NOT a renewable energy source?</span><span class="s0">&lt;/p &gt;</span>
+<span class="s0">&lt;form </span><span class="s2">id</span><span class="s3">=&quot;quizForm&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;radio&quot; </span><span class="s2">name</span><span class="s3">=&quot;q1&quot; </span><span class="s2">value</span><span class="s3">=&quot;A&quot;</span><span class="s0">&gt; </span><span class="s1">Solar Energy</span><span class="s0">&lt;br&gt;</span>
+    <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;radio&quot; </span><span class="s2">name</span><span class="s3">=&quot;q1&quot; </span><span class="s2">value</span><span class="s3">=&quot;B&quot;</span><span class="s0">&gt; </span><span class="s1">Wind Energy</span><span class="s0">&lt;br&gt;</span>
+    <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;radio&quot; </span><span class="s2">name</span><span class="s3">=&quot;q1&quot; </span><span class="s2">value</span><span class="s3">=&quot;C&quot;</span><span class="s0">&gt; </span><span class="s1">Coal</span><span class="s0">&lt;br&gt;</span>
+    <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;radio&quot; </span><span class="s2">name</span><span class="s3">=&quot;q1&quot; </span><span class="s2">value</span><span class="s3">=&quot;D&quot;</span><span class="s0">&gt; </span><span class="s1">Hydro Energy</span><span class="s0">&lt;br&gt;</span>
+    <span class="s0">&lt;button </span><span class="s2">type</span><span class="s3">=&quot;button&quot; </span><span class="s2">onclick</span><span class="s3">=&quot;checkAnswer()&quot;</span><span class="s0">&gt;</span><span class="s1">提交</span><span class="s0">&lt;/button&gt;</span>
+<span class="s0">&lt;/form&gt;</span>
+<span class="s0">&lt;p </span><span class="s2">id</span><span class="s3">=&quot;result&quot;</span><span class="s0">&gt;&lt;/p &gt;</span>
+
+<span class="s0">&lt;script&gt;</span>
+    <span class="s1">function checkAnswer(){</span>
+      <span class="s1">var form = document.getElementById('quizForm');</span>
+      <span class="s1">var answer = form.q1.value;</span>
+      <span class="s1">if(answer === &quot;C&quot;){</span>
+        <span class="s1">document.getElementById('result').innerText = &quot;✅ 正确！煤不是可再生能源&quot;;</span>
+      <span class="s1">} else {</span>
+        <span class="s1">document.getElementById('result').innerText = &quot;❌ 错误，正确答案是C&quot;;</span>
+      <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;h3&gt;</span><span class="s1">作业打卡</span><span class="s0">&lt;/h3&gt;</span>
+<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;name&quot; </span><span class="s2">placeholder</span><span class="s3">=&quot;输入名字&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;textarea </span><span class="s2">id</span><span class="s3">=&quot;work&quot; </span><span class="s2">placeholder</span><span class="s3">=&quot;写下今天完成的作业&quot;</span><span class="s0">&gt;&lt;/textarea&gt;&lt;br&gt;</span>
+<span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;submitWork()&quot;</span><span class="s0">&gt;</span><span class="s1">提交</span><span class="s0">&lt;/button&gt;</span>
+<span class="s0">&lt;p </span><span class="s2">id</span><span class="s3">=&quot;message&quot;</span><span class="s0">&gt;&lt;/p &gt;</span>
+
+<span class="s0">&lt;script&gt;</span>
+    <span class="s1">function submitWork(){</span>
+      <span class="s1">var name = document.getElementById('name').value.trim();</span>
+      <span class="s1">var work = document.getElementById('work').value.trim();</span>
+      <span class="s1">if(!name || !work){</span>
+        <span class="s1">alert(&quot;请填写姓名和作业内容&quot;);</span>
+        <span class="s1">return;</span>
+      <span class="s1">}</span>
+      <span class="s1">var now = new Date();</span>
+      <span class="s1">document.getElementById('message').innerText = `✅ ${name} 打卡成功！时间：${now.toLocaleTimeString()}`;</span>
+      <span class="s1">console.log(name, work, now); // 这里可以上传到云端</span>
+      <span class="s1">document.getElementById('name').value = &quot;&quot;;</span>
+      <span class="s1">document.getElementById('work').value = &quot;&quot;;</span>
+    <span class="s1">}</span>
+<span class="s0">&lt;/script&gt;</span>
+
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
